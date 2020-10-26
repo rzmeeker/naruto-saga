@@ -49,12 +49,17 @@ def ninja_info_card():
         iqColor = "rgba(140, 194, 171, 1)" if iq != max(speed, energy, power, iq) else 'rgba(228, 126, 109, 1)'
 
         if not teamAvatar1:
-            teamAvatar1 = "via.placeholder.com/90x56"
+            teamAvatar1 = "http://via.placeholder.com/90x56"
         if not teamAvatar2:
-            teamAvatar2 = "via.placeholder.com/90x56"
+            teamAvatar2 = "http://via.placeholder.com/90x56"
         if not teamAvatar3:
-            teamAvatar3 = "via.placeholder.com/90x56"
-
+            teamAvatar3 = "http://via.placeholder.com/90x56"
+        if not teamName1:
+            teamName1 = "None"
+        if not teamName2:
+            teamName2 = "None"
+        if not teamName3:
+            teamName3 = "None"
         return render_template("ninja_info_card.html", village=village,
                                country=country,
                                playerName=playerName,
